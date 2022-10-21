@@ -1,6 +1,6 @@
 ## Item3: 일방향 @ManyToOne은 얼마나 효율적일까?
 
-> Author -|-O< Book 관계는 동일, 다만 Author에서는 Book(s)을 관리하지 않고 Book 에서 Author에 대해서만 관리하는 경우이다.
+Author -|-O< Book 관계는 동일, 다만 Author에서는 Book(s)을 관리하지 않고 Book 에서 Author에 대해서만 관리하는 경우이다.
 
 ---
 

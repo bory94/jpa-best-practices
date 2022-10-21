@@ -2,11 +2,11 @@
 > 전제: Author와 Book Entity가 양방향<sub>bidirectional</sub> lazy @OneToMany 관계로 연결되어있다.
 >> 주의사항: 일방향 연관관계 대신 양방향 @OneToMany 관계를 사용하라. 이에 대해 Item2에서 설명한다.
 
-#### 항상 부모 측에서 자식 측으로 Cascade <sub>종속</sub> 설정을 하라
+#### 항상 부모 측에서 자식 측으로 Cascade <sub>종속</sub> 설정을 하라.
 
-#### 부모 측에 항상 mappedBy 설정을 하라
+#### 부모 측에 항상 mappedBy 설정을 하라.
 
-#### 부모 측에 orphanRemoval 설정을 하라
+#### 부모 측에 orphanRemoval 설정을 하라.
 
 ```java 
 // 부모 측 결과 코드
@@ -36,5 +36,5 @@ private Author author;
 @ManyToOne(fetchType = FetchType.LAZY)
 ```
 
-### ToString()을 제대로 재정의하였는지 주의할 것
+### ToString()을 제대로 재정의하였는지 주의하라.
 > Lazy 관계 Entity를 toString()에서 사용하면 LazyInitializationException이 발생할 수 있다.

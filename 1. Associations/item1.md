@@ -1,6 +1,6 @@
 ## Item1: @OneToMany 관계를 효과적으로 구현하기
 > 전제: Author와 Book Entity가 양방향<sub>bidirectional</sub> lazy @OneToMany 관계로 연결되어있다.
->> 주의사항: 일방향 연관관계 대신 양방향 @OneToMany 관계를 사용하라. 이에 대해 Item2에서 설명한다.
+> > 주의사항: 일방향 연관관계 대신 양방향 @OneToMany 관계를 사용하라. 이에 대해 [Item2](item2.md)에서 설명한다.
 
 #### 항상 부모 측에서 자식 측으로 Cascade <sub>종속</sub> 설정을 하라.
 
@@ -15,6 +15,7 @@
   mappedBy = "author", // Author가 Book에 author란 필드명으로 연결되었다.
   orphanRemoval = true  
 )
+private List<Book> books;
 
 // 자식 측 결과코드
 @ManyToOne(fetch = FetchType.LAZY)

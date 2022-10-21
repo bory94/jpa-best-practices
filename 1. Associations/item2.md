@@ -3,12 +3,12 @@
 > 
 > 원서에 설명이 완벽하게 잘 되어 있지는 않지만, @OneToMany 관계인 Entity 간에 단방향 @OneToMany를 사용하지 말라는 의미이다.
 > 
-> @ManyToMany에 대한 주의사항이 아니며, @ManyToMany에 대해서는 Item4에서 별도로 다룬다.
+> @ManyToMany에 대한 주의사항이 아니며, @ManyToMany에 대해서는 [Item4](./item4.md)에서 별도로 다룬다.
 
 > 전제: Author와 Book Entity가 일방향<sub>unidirectional</sub> lazy @OneToMany 관계로 연결되어있다.
 >> 일방향 @OneToMany이기 때문에 author -|-O< author_books >O-|- book 형태로 엔티티가 구성된다.
 >>
->> 즉, author_books라는 연결<sub>junction</sub> 테이블이 필요하다. 
+>> 즉, author_books라는 연결<sub>junction</sub> 엔티티가 필요하다. 
 
 ### 연결 테이블이 두 개의 외래키를 보유하며, 그래서 메모리를 더 많이 사용하게 된다. 또, 모든 CRUD 작업에 더 많은 비용이 소비된다. 
 
@@ -27,12 +27,12 @@
 ---
 
 ### @OrderColumn을 사용하는 경우
-> ORDER BY 하기 위한 별도의 컬럼을 연결 테이블<sub>author_books</sub>에 갖고 있어야 한다.
+> ORDER BY 하기 위한 별도의 컬럼을 연결 엔티티<sub>author_books</sub>에 갖고 있어야 한다.
 >
 > 그로 인해 데이터 등록/삭제 시 별도의 추가 DML이 실행되어야 한다. 
 
 ### @JoinColumn을 사용하는 경우
-> @JoinColumn을 사용하면 다음과 같은 코드를 이용하게 되고 그 결과 연결<sub>author_books</sub> 테이블이 필요 없게 된다.
+> @JoinColumn을 사용하면 다음과 같은 코드를 이용하게 되고 그 결과 연결<sub>author_books</sub> 엔티티가 필요 없게 된다.
 > > 하지만 단방향 @OneToMany를 사용하고 있다는 전제는 여전하다. 
 ```java
 @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)

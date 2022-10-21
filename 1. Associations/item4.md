@@ -3,7 +3,7 @@
 > 
 > 즉, 하나의 Book에 대해 공저자가 있음을 의미한다. (당연히 한 명의 저자는 한 권이상의 저서를 저술...)
 > 
-> > 다대다 관계는 author -|-O< author_book >O-|- book 형태로 각 엔티티가 연결<sub>junction</sub> 테이블을 통해야 한다.
+> > 다대다 관계는 author -|-O< author_book >O-|- book 형태로 각 엔티티가 연결<sub>junction</sub> 엔티티을 통해야 한다.
 
 ### 어느 쪽이 소유자<sub>Owner</sub>인지 결정하라.
 > Author와 Book 중 소유하는 쪽을 결정하고, 그 반대편을 mappedBy로 설정해준다.
@@ -46,4 +46,4 @@ private Set<Book> books = new HashSet<>();
 ### equals()와 hashCode() 메소드를 적절히 재정의하라.
 > 이에 대해서는 [Ultimate Guide to Implementing equals() and hashCode() with Hibernate](https://thorben-janssen.com/ultimate-guide-to-implementing-equals-and-hashcode-with-hibernate/) 글을 참조
 
-### 참고: @ManyToMany 관계를 양방향 @OneToMany 관계를 이용하여 처리할 수도 있다. 이 경우 연결 테이블이 @Entity로 실체화되어 양방향 @OneToMany를 지원하게 된다.
+### 참고: @ManyToMany 관계를 양방향 @OneToMany 관계를 이용하여 처리할 수도 있다. 이 경우 연결 엔티티가 @Entity로 실체화되어 양방향 @OneToMany를 지원하게 된다.

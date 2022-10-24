@@ -16,7 +16,8 @@
 
 ## 목차
 
-1. [Associations](./1.%20Associations/README.md) 
+1. [Associations](./1.%20Associations/README.md)
+2. [Entities](./2.%20Entities/README.md)
 
 ---
 ## References

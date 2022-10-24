@@ -13,3 +13,11 @@
 ### Item6: [자식 요소를 제거할 때 CascadeType.Remove와 orphanRemoval=true를 피해야 하는 경우](./item6.md)
 
 ### Item7: [JPA Entity Graph를 이용하여 연관관계 조회하기](./item7.md)
+
+### Item8: [Entity Sub-Graph를 통해 연관관계 로딩하는 방법](./item8.md)
+
+### Item9: [엔티티 그래프와 기본 속성을 다루는 방법](./item9.md)
+
+### Item10: [하이버네이트 지정 @Where 애너테이션을 이용하여 연관관계 필터링하는 방법](./item10.md)
+
+### Item11: [단방향/양방향 @OneToOne 관계를 @MapsId를 통해 최적화하는 방법](./item11.md)

@@ -96,6 +96,6 @@ public void handleCheckReviewEvent(CheckReviewEvent event) {
 
 > 주의
 > 
-> 도메인 이벤트는 Spring Data를 이용할 때에만 사용할 수 있다.
-> 도메인 이벤트는 Repository의 save 메소드를 호출할 때에만 게시된다.
-> 이벤트를 게시하는 과정에서 예외가 발생한다면 이벤트 리스너는 실행되지 않는다. 이 경우, <b>이벤트가 유실된다.</b>
+> - 도메인 이벤트는 Spring Data를 이용할 때에만 사용할 수 있다.
+> - 도메인 이벤트는 Repository의 save 메소드를 호출할 때에만 게시된다.
+> - 이벤트를 게시하는 과정에서 예외가 발생한다면 이벤트 리스너는 실행되지 않는다. 이 경우, <b>이벤트가 유실된다.</b>

@@ -18,6 +18,8 @@
 
 1. [Associations](./1.%20Associations/README.md)
 2. [Entities](./2.%20Entities/README.md)
+3. [Fetching](./3.%20Fetching/README.md)
+4. [Batching](./4.%20Batching/README.md)
 
 ---
 ## References

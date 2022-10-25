@@ -22,3 +22,7 @@
 ### Item38: [Blaze-Persistence 엔티티 뷰를 이용하여 DTO 가져오기](./item38.md)
 ### Item39: [하나의 SELECT 만으로 부모와 연관 관계 데이터를 효과적으로 가져오는 방법](./item39.md)
 ### Item40: [JOIN과 JOIN FETCH 중 어떤 것을 선택할지 결정하는 방법](./item40.md)
+### Item41: [LEFT JOIN을 하는 방법](./item41.md)
+### Item42: [JOIN 문 사용 방법](./item42.md)
+### Item43: [Paginated JOIN 방법](./item43.md)
+### Item44: [MySQL Result Set에 대해 Stream 처리하기](./item44.md)
